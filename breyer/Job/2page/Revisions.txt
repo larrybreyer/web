@@ -1,0 +1,19 @@
+
+20110203 Changed
+
+From
+    Configuration management with cfengine, RCS, CVS, and Subversion.
+
+To
+    Configuration management with cfengine.
+    Source control with RCS, CVS, and Subversion.
+
+Changed
+
+From
+    Technical Training: Microsoft, Oracle, Sun Microsystems, Cisco,
+                        and BioInformatics
+
+To
+    Technical Training: Microsoft, Oracle, Cisco, and BioInformatics
+

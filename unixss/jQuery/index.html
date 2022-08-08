@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+<head>
+<title>Browser type</title>
+</head>
+<body>
+
+<!--
+
+  Firefox, Chrome, and Safari return "Netscape"
+  IE returns "Microsoft Internet Explorer"
+
+  The method shown below is called "browser detection."
+  It is better, though more difficult to use "feature detection."
+
+ -->
+
+<p>Click the button to display the name of your browser.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = "Browser Name: " + navigator.appName;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+	Larry Breyer
+
+Education:
+	San Diego State University, San Diego, CA 
+                                      	Bachelor of Science in Electrical Engineering
+ 
+Technical Training: Oracle and Sun Microsystems
+
+Technical
+Summary:
+	
+	Oracle Database Developer
+* Full range of skills in Oracle application stack.
+* Installation and upgrade to 10g and 11g.
+* Create SQL*Plus and PL/SQL scripts and stored procedures.
+* Create, backup, monitor, enhance and tune databases.
+* Implement raw storage and ASM.
+* Implement OLTP, archive logging, and RMAN.
+* Implement RAC database clusters.
+* Install, configure and utilize various Oracle tools including STATSPACK.
+* Create Views, Triggers, Synonyms, Functions, Procedures and Packages.
+
+Solaris/Linux Systems Developer 
+* Full range of system administration skills on Solaris and Red Hat.
+* Install, monitor, upgrade, patch, profile and trouble-shoot.
+* Backups using ufsdump, Bakbone, and Veritas.
+* Process control using quotas, access control lists (ACL), and Projects.
+* Configuration management using cfengine, RCS, CVS, and Subversion.
+* Rapid deployment using jumpstart, PXE kickstart, and VMware.
+* Network analysis and monitoring using snoop, tcpdump, and arpwatch.
+* TCP/IP, Samba, NIS, NFS, DNS, DHCP, SNMP, and LDAP.
+* SMTP, Sendmail, Postfix, POP, IMAP, and spamassassin.
+* Firewalls, NAT, SSH, SecurID, Radius, PGP, SSL, IPtables, ipf, and PKI.
+* HTTP, Apache web server, HTML, XML, CGI, Perl, PHP and SQUID.
+* Documentation, research, training, testing and evaluation.
+* Printers, scanners, wireless access points, KVMs, and concentrators.
+* Desktop support on MacOSX, Linux and Windows.
+	
+	BioInformatics Developer
+* Perform Linux OS and MySQL database administration
+* Shell scripting in Perl, PHP, and bash.
+* Database development using MySQL and Oracle PL/SQL. 
+* Web development using HTML, MySQL, Apache Tomcat, Java
+* Software configuration management (SCM)  in SCCS, RCS, and CVS. 
+* Build process control and integration using Make and Ant. 
+* Testing using debuggers (jdb, dtrace, dbx and gdb), stubs and drivers. 
+* Document in Microsoft Office, Adobe, and HTML (Wiki and web).
+* Quality assurance developing test cases, test plans and procedures.
+
+
+
+Experience:
+
+
+August 2008	Isis Pharmaceuticals
+To Present	Carlsbad, CA
+
+	SOLARIS/LINUX SYSTEMS ADMINISTRATOR
+	ORACLE/MySQL DATABASE ADMINISTRATOR
+* Provide system, database and application support.
+* Support 200 researchers and developers.
+* Includes administration of servers and storage devices. 
+* Sun server (4), Sun SAN(2), Sun NAS (1 x 32 TB).
+* 10 servers running Apache/Tomcat on HP/Red Hat.
+* Implemented 20 machine Sun Grid Engine cluster on HP/Red Hat.
+* Implemented Oracle 10g Grid DBA support on a 2 node RAC.
+* Provide Oracle SQL*Plus and PL/SQL programming support.
+* Extensive programming in Perl and Java.
+* Implemented conversion from 32 to 64-bit Intel.
+
+
+February 2007	Salk Institute
+To July 2008	La Jolla, CA
+
+	SOLARIS/LINUX SYSTEMS ADMINISTRATOR
+* Providing full range of support for 1200 users.
+* Includes, backups, network, accounts, security, and helpdesk. 
+* 15 servers running Solaris on Sun.
+* 45 servers running various flavors of Linux on Dell.
+* 1100 desktop systems running MacOSX and Windows.
+* Support a wide range of applications including Apache, MySQL, Oracle, Veritas NetBackup, Nagios, Cacti, Highline(Payroll), SunGard (Accounting), SciQuest (Purchasing), and many more.
+* Extensive scripting in Perl, Bash, PHP, and others.
+* Project planning and implementation.
+* Training and documentation.
+* Customer service.
+
+October 2004	UCSD
+To February 2007 	La Jolla, CA
+
+	SOLARIS/LINUX SYSTEMS ADMINISTRATOR
+* Providing full range of support for 1000 users.
+* Includes, backups, network, accounts, security, and helpdesk. 
+* 12 Department servers running Solaris on Sun.
+* 100 research servers running various flavors of Linux.
+* 400 desktop systems running Solaris, Linux, and Windows.
+* Support a wide range of commercial and open source applications including Oracle, IBM purify, Bakbone NetVault, and many, many more.
+* Provided support setting up Sun high-end servers, clusters, and workstations.
+* Installed and configured commercial and open source applications.
+* Provided technical support to several hundred developers.
+
+
+
+
+
+
+
+
+
+Experience	(Continued)
+
+
+October 2003	Qualcomm 
+To October 2004	San Diego, CA
+	UNIX SYSTEMS ADMINISTRATOR CONSULTANT
+
+* Provided technical support for 500 engineers on Sun servers and workstations and NetApp file servers.
+
+October 2001	NMCI 
+To October 2003	San Diego, CA
+	UNIX SYSTEMS ADMINISTRATOR CONSULTANT
+	
+* Participated in development of a new military Intranet serving
+350,000 users globally.  
+* Worked at the development center and Network Operations Center at the multiple locations.  
+* Managed high-end Sun servers whose purpose was to secure account administration.
+* Deployed Oracle database.  
+* Responsibilities included backups, reliability, redundancy and
+security.  Tools included: Veritas disk management, jumpstart
+and many other components of the Solaris software suite.
+
+April 2001	Qualcomm 
+To October 2001	San Diego, CA
+	UNIX SYSTEMS ADMINISTRATOR CONSULTANT
+
+* Provided technical support for 500 engineers on Sun servers and workstations and NetApp file servers.
+
+April 2000	Apple Computer
+To April 2001	Cupertino, CA
+	UNIX SYSTEMS ADMINISTRATOR CONSULTANT
+
+* Provided technical support for 80 engineers on Sun servers and workstations and NetApp file servers.
+
+October 1999	Qualcomm 
+To April 2000	San Diego, CA
+	UNIX SYSTEMS ADMINISTRATOR CONSULTANT
+
+* Provided technical support for 500 engineers on Sun servers and workstations and NetApp file servers.
+
+October 1998	Lockheed Martin 
+To October 1999	Sunnyvale, CA
+	SOLARIS/HP-UX/IRIX SYSTEMS ADMINISTRATOR CONSULTANT
+
+* Supported a group of 50 engineers developing the launch package
+for their Delta rockets on the Iridium satellite project.
+* Support a mix of 50 Sun and HP workstations running a variety
+of CAD/CAM applications. 
+* Hardware included an HP and a NetApp file server.  
+
+
+Experience	(Continued)
+
+
+April 1998	Hotmail 
+To October 1998	Sunnyvale, CA
+	SOLARIS/FREEBSD SYSTEMS ADMINISTRATOR CONSULTANT
+
+* Managed large Sun server with an Oracle database behind
+75 FreeBSD machines running Apache web server.  
+* Managed a large Cisco router/switch running Local Director.  
+* Helped grow systems from 2 million to 20 million email hits per day
+* Direct contact with denial of service attacks and email bombs.  
+* Worked with various ISPs in tracking down people trying to use Hotmail to email bomb their adversaries.
+
+
+April 1997	Andersen Consulting
+To April 1998	San Ramon, CA
+	UNIX SYSTEMS ADMINISTRATOR CONSULTANT
+
+* Unix consultant in the conversion of Andersen’s accounting
+software from IBM mainframe (COBOL) to Sun Solaris (C++).  
+* They had been contracted by Iridium (Motorola) to port their software 
+to a Unix environment.  
+* Managed the huge volume of tiny account transactions typical of cell phone
+technology. 
+* Supported 80 software developers.   
+* Supported backups, software configuration management and debugging development software.
+
+April 1996	Silicon Graphics 
+To April 1997 	Mountain View, CA
+	IRIX SYSTEMS ADMINISTRATOR CONSULTANT 
+
+* Participated in the development and deployment of IRIX 6.5.
+* Tested and debugged code on all SGI platforms.
+
+April 1995	Kaiser Permanente 
+To April 1996	Walnut Creek, CA
+	SOLARIS/TIVOLI SYSTEMS ADMINISTRATOR CONSULTANT
+
+* Northern regional data center for over 1 million subscribers and 10,000 health care professionals.
+* Participated in data migration from IBM mainframes to Sun high-end computers. Used Tivoli application for software and data synchronization and backup to 500 medical centers in Northern California.
+
+October 1994	Montgomery Securities
+To April 1995	San Francisco, CA
+	UNIX SYSTEMS ADMINISTRATOR CONSULTANT 
+
+* Support Sun computers in a highly secure and redundant environment (in compliance with strict SEC regulations).
+Larry Breyer			Page 2
+
+
+

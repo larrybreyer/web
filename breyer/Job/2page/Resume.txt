@@ -1,0 +1,116 @@
+	Larry Breyer (858-597-9880)
+	5405 El Ontono Way, San Diego, CA 92121
+
+Education:
+	San Diego State University, San Diego, CA 
+        Bachelor of Science in Electrical Engineering
+ 
+Technical Training: Microsoft, Oracle, Cisco, and BioInformatics 
+
+
+Technical Summary:
+
+Senior Technical Support Engineer
+* Full range of system administration skills on Windows, Linux, and Unix.
+* Install, monitor, upgrade, patch, profile and trouble-shoot.
+* NAS/SAN on NetApp and Sun Storage.
+* Backups using ufsdump, Bakbone, and Veritas.
+* Load balancing with Cisco Local Director and Sun Grid Engine.
+* Virtualization with Solaris and VMware.
+* Process control using quotas, access control lists (ACL), and Projects.
+* Configuration management with cfengine.
+* Source control with RCS, CVS, and Subversion.
+* Rapid deployment using jumpstart, PXE kickstart, and VMware.
+* Network analysis and monitoring using snoop, tcpdump, and arpwatch.
+* TCP/IP, Samba, NIS, NFS, DNS, DHCP, SNMP, LDAP, and Active Directory.
+* Office Express, SMTP, Sendmail, and Postfix.
+* Firewalls, NAT, SSH, SecurID, Radius, PGP, SSL, IPtables, ipf, and PKI.
+* Programming C/C++, Java, Tomcat, Perl, and Shell.
+* Web Services with HTTP, IIS, Apache, HTML, XML, CGI, PHP and SQUID.
+* Documentation, research, training, testing and evaluation.
+* Printers, scanners, wireless access points, KVMs, and concentrators.
+* Desktop support on MacOSX, Linux and Windows.
+* Tier 3/4 help desk support
+	
+	Database Administrator
+* Full range of skills in SQL and Oracle application stack.
+* Installation and upgrade to Oracle 10g and 11g.
+* Implement RMAN database backup and replication.
+* Create SQL*Plus and PL/SQL scripts and stored procedures.
+* Create, backup, monitor, enhance and tune databases.
+* Implement raw storage and ASM.
+* Implement OLTP, archive logging, and RMAN.
+* Implement RAC database clusters.
+* Program database applications using ODBC and JDBC.
+* Create Views, Triggers, Synonyms, Functions, Procedures and Packages.
+	
+	BioInformatics Engineer/Programmer
+* Perform Linux OS and MySQL database administration
+* Shell scripting in Python, Perl, PHP, and bash.
+* Database development using MySQL and Oracle PL/SQL. 
+* Web development using HTML, MySQL, Apache Tomcat, Java
+* Software configuration management (SCM)  in SCCS, RCS, and CVS. 
+* Build process control and integration using Make and Ant. 
+* Testing using debuggers (jdb, dtrace, dbx and gdb), stubs and drivers. 
+* Document in Microsoft Office, Adobe, and HTML (Wiki and web).
+* Quality assurance developing test cases, test plans and procedures.
+
+
+
+Experience:
+
+
+August 2008	Isis Pharmaceuticals
+To Present	Carlsbad, CA
+
+	BioInformatics System Administrator 
+* Provide system, database and application support.
+* Support 200 researchers and developers.
+* Includes administration of servers, storage, network, desktop. 
+* Sun server (4), Sun SAN(2), Sun NAS (1 x 32 TB).
+* 20 servers running Apache/Tomcat on HP/Red Hat.
+* Implemented 20 machine Sun Grid Engine cluster on HP/Red Hat.
+* Implemented Oracle 10g Grid DBA support on a 2 node RAC.
+* Provide Oracle SQL*Plus and PL/SQL programming support.
+* Extensive programming in Perl, Python and Java.
+* Implemented conversion from 32 to 64-bit Intel.
+
+
+October 2004	Salk Institute
+To July 2008	La Jolla, CA
+
+	System Administrator
+* Providing full range of support for 1200 users.
+* Includes, backups, network, accounts, security, and helpdesk. 
+* 15 servers running Solaris on Sun.
+* 45 servers running various flavors of Linux on Dell.
+* 1100 desktop systems running MacOSX and Windows.
+* Support a wide range of applications including Apache, MySQL, Oracle, Veritas NetBackup, Nagios, Cacti, Highline(Payroll), SunGard (Accounting), SciQuest (Purchasing), and many more.
+* Extensive scripting in Perl, Bash, PHP, Python, and others.
+* Project planning and implementation.
+* Training and documentation.
+* Customer service.
+
+October 1990	Independent Contractor
+To October 2004 	Bay Area counties, Los Angeles, Orange, and San Diego
+
+	System Support Engineer
+* Clients included Qualcomm, Solar Turbines, Kaiser Permanente
+* Clients include Electronic Data Systems, General Dynamics
+* Clients included Lockheed Martin, Hughes Aerospace, RAND
+* Clients included Apple Computer, Sun Microsystems, SGI, Hotmail
+* Clients included Montgomery Securities and Andersen Consulting
+* Providing full range of support for 100 - 1000+ users.
+* Includes, backups, network, accounts, security, and helpdesk. 
+* Department servers running Solaris, Linux, or Windows.
+* Desktop systems running Windows including XP, Vista, 7.
+* Provided support setting up HP, Dell, IBM, and Sun servers, clusters, and workstations.
+* Installed and configured commercial and open source applications.
+* Provided tier 3 and 4 support to helpdesk and developers.
+
+
+
+Larry Breyer			Page 2
+
+
+

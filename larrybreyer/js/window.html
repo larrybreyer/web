@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+<head>
+<title>JavaScript Window Size</title>
+</head>
+<body>
+
+    <p>Click the button to display this window's height and width (NOT
+	including toolbars and scrollbars).</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+
+    function myFunction() {
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        document.getElementById("demo").innerHTML = "Width: " + w + "<br>Height: " + h;
+    }
+
+    var txt = "";
+    txt += "<p>Total width/height: " + screen.width + "*" + screen.height + "</p>";
+    txt += "<p>Available width/height: " + screen.availWidth + "*" + screen.availHeight + "</p>";
+    txt += "<p>Color depth: " + screen.colorDepth + "</p>";
+    txt += "<p>Color resolution: " + screen.pixelDepth + "</p>";
+    document.getElementById("demo").innerHTML = txt;
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+	Larry Breyer 
+
+Education:
+San Diego State University, San Diego, CA 
+Bachelor of Science in Electrical Engineering
+ 
+Technical Training: 
+Microsoft, Oracle, Sun Microsystems, Cisco, and BioInformatics
+
+Technical Summary:
+
+Senior Technical Support Engineer
+* Full range of system administration skills on Windows, Linux, and Unix.
+* Install, monitor, upgrade, patch, profile and trouble-shoot.
+* NAS/SAN on NetApp and Sun Storage.
+* Backups using ufsdump, Bakbone, and Veritas.
+* Load balancing with Cisco Local Director and Sun Grid Engine.
+* Virtualization with Solaris and VMware.
+* Process control using quotas, access control lists (ACL), and Projects.
+* Configuration management using cfengine, RCS, CVS, and Subversion.
+* Rapid deployment using jumpstart, PXE kickstart, and VMware.
+* Network analysis and monitoring using snoop, tcpdump, and arpwatch.
+* TCP/IP, Samba, NIS, NFS, DNS, DHCP, SNMP, LDAP, and Active Directory.
+* Office Express, SMTP, Sendmail, and Postfix.
+* Firewalls, NAT, SSH, SecurID, Radius, PGP, SSL, IPtables, ipf, and PKI.
+* Programming C/C++, Java, Tomcat, Perl, and Shell.
+* Web Services with HTTP, IIS, Apache, HTML, XML, CGI, PHP and SQUID.
+* Documentation, research, training, testing and evaluation.
+* Printers, scanners, wireless access points, KVMs, and concentrators.
+* Desktop support on MacOSX, Linux and Windows.
+* Tier 3/4 help desk support
+	
+Database Administrator
+* Full range of skills in SQL and Oracle application stack.
+* Installation and upgrade to Oracle 10g and 11g.
+* Implement RMAN database backup and replication.
+* Create SQL*Plus and PL/SQL scripts and stored procedures.
+* Create, backup, monitor, enhance and tune databases.
+* Implement raw storage and ASM.
+* Implement OLTP, archive logging, and RMAN.
+* Implement RAC database clusters.
+* Program database applications using ODBC and JDBC.
+* Create Views, Triggers, Synonyms, Functions, Procedures and Packages.
+	
+BioInformatics Engineer/Programmer
+* Perform Linux OS and MySQL database administration
+* Shell scripting in Python, Perl, PHP, and bash.
+* Database development using MySQL and Oracle PL/SQL. 
+* Web development using HTML, MySQL, Apache Tomcat, Java
+* Software configuration management (SCM)  in SCCS, RCS, and CVS. 
+* Build process control and integration using Make and Ant. 
+* Testing using debuggers (jdb, dtrace, dbx and gdb), stubs and drivers. 
+* Document in Microsoft Office, Adobe, and HTML (Wiki and web).
+* Quality assurance developing test cases, test plans and procedures.
+
+Employment History, Salary, and References available when appropriate.
+ 
+
