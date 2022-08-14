@@ -1,0 +1,69 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lists</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <h2>Applications</h2>
+    <table><tr>
+    <td>
+    <ul>
+      <li>Favorites</li>
+      <li>Recently Used</li>
+      <li>All Applications</li>
+      <li>Settings</li>
+      <li>Usual Applications</li>
+      <!--
+      <li onfocus="loadPage('list01.html')">
+      -->
+      <li id="mydiv" onclick="loadPage('list01.html')">
+      01 - Information Gathering
+
+
+      </li>
+      <li>02 - Vulnerability Analysis</li>
+      <li>03 - Web Application Analysis</li>
+      <li>04 - Database Assessment</li>
+      <li>05 - Password Attacks</li>
+      <li>06 - Wireless Attacks</li>
+      <li>07 - Reverse Engineering</li>
+      <li>08 - Exploitation Tools</li>
+      <li>09 - Sniffing &amp; Spoofing</li>
+      <li>10 - Post Exploitation</li>
+      <li>11 - Forensics</li>
+      <li>12 - Reporting Tools</li>
+      <li>13 - Social Engineering Tools</li>
+      <li>14 - System Services</li>
+    </ul>
+    </td>
+
+    <td id="myPage">
+    <!--
+      <iframe id="myPage" >
+      <iframe height="600" id="myPage" src="list01.html">
+      </iframe>
+      -->
+    </td>
+
+    </tr></table>
+    <script>
+      function loadPage(thepage) {
+           console.log(thepage);
+           thepage =   "<iframe src=\"" + thepage + "\">" ;
+           console.log(thepage);
+        // document.getElementById("myPage").src = 
+        //     "<iframe src=\"" + thepage + "\">" ;
+           document.getElementById("mydiv").style.backgroundColor
+               = "lightblue";
+
+      }
+
+    </script>
+  </body>
+</html>
+<!--
+  vim: expandtab tabstop=2  number autoindent
+-->
