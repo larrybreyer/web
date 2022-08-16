@@ -1,0 +1,27 @@
+
+body {
+  background-image: url('images/kali-small-logo2-16x9.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  float: left;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333344;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  display: inline;
+}
+
+/*
+    vim: ft=css ai ts=2 et
+*/
