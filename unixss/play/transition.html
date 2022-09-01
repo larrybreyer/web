@@ -1,0 +1,47 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Transition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    div {
+        color: #000000;
+        background: #2db34a;
+        line-height: 200px;
+        text-align: center;
+        width: 250px;
+        height: 200px;
+        border-radius: 6px;
+        
+        transition-property: color, width, background, border-radius;
+        transition-duration: .5s;
+        transition-timing-function: linear;
+        transition-delay: .5s;
+
+        /*transition: .5s linear .5s; */
+    }   
+    div:hover {
+        color: #ffffff;
+        width: 350px;
+        background: #2d21b3;
+        border-radius: 50%
+    }   
+
+    div:active {
+        color: #000000;
+        width: 150px;
+        background: #00ddb3;
+    }
+  </style>
+</head>
+<body>
+    <div>TRANSITION</div>
+</body>
+</html>
+
+<!--
+Template: ~/.vim/templates/html.skel
+vim: ft=html ai et ts=2
+-->
+
