@@ -1,0 +1,36 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+  <p>
+    See what happens to the lnk that prints our the URI.
+  </p>
+  <p>
+    What happens if you forget the script tags?
+  </p>
+  <script>
+    var name;
+    name = prompt("What is your name? ");
+    document.write(name);
+    document.write("<h1>" + name + "</h1>");
+    document.write(name + 7 + "<br>");
+    document.write(document.title+"<br>");
+    var pars = document.getElementsByTagName('p');
+    document.write(pars + "<br>");
+    document.write(pars.length + "<br>");
+  </script>
+
+</body>
+</html>
+
+<!--
+Template: ~/.vim/templates/html.skel
+vim: ft=html ai et ts=2
+-->
+
