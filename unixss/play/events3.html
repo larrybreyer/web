@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Change the Style</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .closed {
+            display: none;
+        }   
+        
+        .open {
+            display: block;
+        }   
+        
+        button {
+            width:150px;
+            background-color: #00CCEE;
+        }
+    </style>
+    <script>
+        function closeMe() {
+            // Find the element
+            x=document.getElementById("demo");
+        
+            // Option 1: Chnage the style attribute directly
+            // x.style.display="none";
+        
+            // Option 2: Change the class
+            x.className="closed";
+        }
+        
+        function openMe() {
+            // Find the element
+            x=document.getElementById("demo");
+        
+            // Option 1: Chnage the style attribute directly
+            // x.style.display="block";
+        
+            // Option 2: Change the class
+            x.className="open";
+        }
+    </script>
+
+  </head>
+  <body>
+        
+        <h1>Changing the Style</h1>
+        <p> JavaScript can change the style of an HTML element.</p>
+
+        <button type="button" onclick="openMe()">Open!</button>
+
+        <button type="button" onclick="closeMe()">Close!</button>
+
+        <p id="demo">Extra details...You can open and close this paragraph
+            using the button above.</p>
+
+  </body>
+</html>
+
+<!--
+Template: ~/.vim/templates/html.skel
+vim: ft=html ai et ts=2
+-->
+
