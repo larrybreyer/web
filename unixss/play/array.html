@@ -1,0 +1,37 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            var fruits = ["Banana","Orange","Apple","Mango"];
+            
+            function loadFruits(){
+                document.getElementById("fruits").innerHTML = fruits;
+            }   
+            
+            function myFunction() {
+                var fruit = prompt("What is your favorite fruit?");
+                fruits[fruits.length] = fruit;
+                document.getElementById("fruits").innerHTML = fruits;
+            }   
+        </script>
+</head>
+
+<!--
+<body>
+ -->
+<body onload="loadFruits()">
+    <button onclick="myFunction()">Add your favorite!</button>
+
+    <p id="fruits"></p>
+
+</body>
+</html>
+
+<!--
+Template: ~/.vim/templates/html.skel
+vim: ft=html ai et ts=2
+-->
+

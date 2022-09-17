@@ -1,0 +1,36 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script>
+        function displayId(element) {
+            console.log(element.id)
+        }
+    </script>
+</head>
+<body>
+
+   <img src = "kali-www-24x24.png" alt = "Picture #1"
+        onclick = "console.log(this.alt)">
+
+    <div onclick = "console.log(this.innerHTML)">
+        Hi There, checking out a div</div>
+
+
+    <hr>
+
+    <img src = "kali-www-48X48.png" alt = "Picture #2" id = "ID-1"
+        onclick = "displayId(this)">
+
+    <div onclick = "displayId(this)" id = "ID-2">Another Div</div>
+
+</body>
+</html>
+
+<!--
+Template: ~/.vim/templates/html.skel
+vim: ft=html ai et ts=2
+-->
+
