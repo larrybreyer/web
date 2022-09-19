@@ -17,7 +17,15 @@
   <script>
     var name;
     name = prompt("What is your name? ");
-    document.write(name);
+    if ( name.length != 0 ) {
+      if ( name == "Colleen" )
+        document.write("What a beautiful name");
+      else
+        document.write("Hello " + name);
+    }
+    else
+      document.write("Feeling Shy?");
+
     document.write("<h1>" + name + "</h1>");
     document.write(name + 7 + "<br>");
     document.write(document.title+"<br>");
