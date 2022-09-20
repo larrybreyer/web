@@ -1,0 +1,48 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Form Validation Example</title>
+</head>
+<body>
+
+    <script>
+      function nicknameFunction() {
+        if(document.getElementById('yesNick').checked) {
+          document.getElementById('nick').style.display="inline";
+          document.getElementById('nickname').setAttribute('required',true);
+        }
+        else {
+          document.getElementById('nickname').removeAttribute('required');
+          document.getElementById('nick').style.display="none";
+        }
+      }
+    </script>
+
+    <form>
+
+        <fieldset>
+        <legend>Form Verification</legend>
+        <!-- ...  -->
+        <label for "fName">First Name:</label>
+        <input type="text" name="fName" id="fName" required><br/>
+        <label for "lName">Last Name:</label>
+        <input type="text" name="lName" id="lName" required><br/>
+        <label for="yesNick">Nickname?:</label>
+        <input id="yesNick" name="yesNick" type="checkbox" value="yes"
+            onchange="nicknameFunction()"/><br/>
+
+        <div id="nick">
+            <label for="nickname">Nickname:</label>
+            <input type="text" name="nickname" id="nickname"><br/>
+        </div>
+        <input type="submit" value="Verify"/>
+        </fieldset>
+    </form>
+
+</body>
+</html>
+<!--
+  The "name" field helps the browser understand grouping.
+  vim: ft=html ai et ts=2
+-->
