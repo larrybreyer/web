@@ -1,11 +1,18 @@
 
-//
-//  let number1 = prompt("Please enter a number");
-//  let number2 = prompt("Please enter another number");
-//  if ( number1 >= number2 ) {
-//    document.write(number1);
-//  } else {
-//    document.write(number2);
-//  }
+let LANG = prompt('Please enter a language code (es, de, [en], fr)');
 
-let LANG = prompt('Please enter a language code');
+switch(LANG) {
+  case "es":
+    console.log("Hola Mundo");
+    break;
+  case "de":
+    console.log("Hallo Welt");
+    break;
+  case "fr":
+    console.log("Bonjour le monde");
+    break;
+  default:
+    console.log("Hello World");
+}
+
+// vim: ai ts=2 et 
