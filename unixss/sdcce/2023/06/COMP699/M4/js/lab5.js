@@ -13,9 +13,11 @@ do {
     mpg = miles / gallons;
     console.log(`Your car gets ${mpg.toFixed(2)} miles per gallon.`);
   } else {
-    windows.alert('One of both entries is invalid.');
+    window.alert('One of both entries is invalid.');
   }
-  again = prompt('Repeat entries? (y or n)','y');
+  do {
+    again = prompt('Repeat entries? (y or n)','y');
+  } while ( again != 'y' && again != 'n');
 } while (again === 'y');
 console.log('Application has exited.');
 
