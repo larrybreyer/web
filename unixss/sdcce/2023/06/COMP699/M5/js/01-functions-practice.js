@@ -54,7 +54,7 @@ function sumOfNumbers() {
 }
 
 // Function calls
-// halfNumber();
+halfNumber();
 // squareNumber();
 // percentOf();
 // findModulus();
