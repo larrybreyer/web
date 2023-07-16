@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+
+<html lang="en" class="">
+	<head>
+		<!-- PAGE TITLE -->
+		<title>Winning America</title>
+
+
+
+		<!-- META/CSS/JS -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<meta name="keywords" content="Winning America, winningamerica.com">
+		<meta name="description" content="A war for the soul of America">
+
+
+		<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/modernizr.webgl.js"></script>
+
+
+
+		<!-- // <script type="text/javascript" src="js/jquery.transit.js"></script> -->
+		<script type="text/javascript" src="js/min/site.min.js"></script>
+		<script type="text/javascript" src="js/three.min.js"></script>
+		<!-- // <script type="text/javascript" src="js/min/Detector.min.js"></script>		 -->
+		<script type="text/javascript" src="js/min/clouds.min.js"></script>
+		<script type="text/javascript" src="js/min/fallback.min.js"></script>
+
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/icons.css">
+		<link rel="stylesheet" href="css/fallback.css">
+
+
+	</head>
+	<body class="">
+		<div class="logo"></div>
+
+		<div class="no-webgl-only message">Your browser don't support 3d animations on this page. <a href="http://browsehappy.com/" target="_blank">Check modern browsers</a></div>
+		<div class="fallback-clouds"></div>
+
+
+
+		<!-- SOCIAL ICONS WITH LINKS -->
+		<div class="socials transit">
+			<!-- HREF IS URL fa-name is icon name and can be replaced with any name from http://fortawesome.github.io/Font-Awesome/icons/ -->
+
+		</div>
+		<!-- END SOCIAL ICONS -->
+
+
+		<!-- PREVIEW OF BACKGROUNDS - REMOVE IF DONT NEEDED -->
+		<div class="preview transit">
+
+		</div>
+		<!-- END OF PREVIEW OF BACKGROUNDS - REMOVE IF DONT NEEDED -->
+
+
+		</script>
+		<!-- SHADERS -->
+		<script id="vs" type="x-shader/x-vertex">
+				varying vec2 vUv;
+
+				void main() {
+					vUv = uv;
+					gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+				}
+		</script>
+		<script id="fs" type="x-shader/x-fragment">
+				uniform sampler2D map;
+
+				uniform vec3 fogColor;
+				uniform float fogNear;
+				uniform float fogFar;
+
+				varying vec2 vUv;
+
+				void main() {
+					float depth = gl_FragCoord.z / gl_FragCoord.w;
+					float fogFactor = smoothstep( fogNear, fogFar, depth );
+					gl_FragColor = texture2D( map, vUv );
+					gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 );
+					gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
+				}
+		</script>
+
+
+	</body>
+<div style="position:fixed;bottom:0px;width: 100%;padding-bottom: 5px;z-index: 2"><center>
+		  <font style="font-family:'Helvetica Neue', Helvetica, Arial, 'sans-serif';font-size: 12px; line-height: 22px;font-weight: normal;color: #000000;">Visit www.bestamericanow.com/privacy for Our Privacy Policy</font>
+	</center></div>
+</html>
