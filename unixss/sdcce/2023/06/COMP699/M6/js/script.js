@@ -12,7 +12,6 @@ const focusAndSelect = selector => {
 
 const processEntries = () => {
   console.log("ID: " + $("#empid").value);
-  console.log("ID: " + $("#empid").value);
   console.log("Name: " + $("#name").value);
   console.log("Extension: " + $("#ext").value);
   console.log("Email: " + $("#email").value);
