@@ -17,11 +17,11 @@ const processEntries = () => {
   console.log("Extension: " + $("#ext").value);
   console.log("Email: " + $("#email").value);
   console.log("Department: " + $("#department").value);
-
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     $("#submit").addEventListener("click", processEntries);
 });
+
 
 // vim: ai ts=2 et
