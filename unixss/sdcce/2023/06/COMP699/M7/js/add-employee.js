@@ -1,10 +1,9 @@
+// 'use strict';
 // HANDLE THE LOAD EVENT OF THE WINDOW
 
-// SET WIDTH AND HEIGHT VARIABLES TO 800 x 700
 
-// RESIZE THE POPUP TO THE SET WIDTH AND HEIGHT
-
-// MOVE THE POPUP TO THE MIDDLE OF THE SCREEN
+// const myWindow = window.open('','','width=800,height=700');
+window.opener.document.getElementById('loginDetails').innerHTML = 'HELLO!';
 
 // CREATE A HELPER FUNCTION TO RETRIEVE THE HTML ELEMENTS FROM THE DOM
 
@@ -21,4 +20,7 @@
 
 // CLOSE THE POPUP
 
+// window.close()
 // THE DATA SHOULD SHOW ON THE INDEX.HTML PAGE
+
+// vim: ai ts=2 et
