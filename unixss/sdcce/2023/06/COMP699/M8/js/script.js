@@ -1,13 +1,20 @@
 // GET ADD EMPLOYEE FORM AND EMPLOYEE TABLE FROM THE DOM
 
 // SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
+let count = 0;
+
+const $ = selector => document.querySelector(selector);
 
 
 // ADD EMPLOYEE
 form.addEventListener('submit', (e) => {
     // PREVENT FORM SUBMISSION
+    form.submit.disabled = true;
+
 
     // GET THE VALUES FROM THE TEXT BOXES
+    let empData = 'ID: '+$("#id").value+'<br>Name:'+$("#name").value+'<br>Extension: '+$("#extension").value+'<br>Email: '+$("#email").value+'<br>Department: '+$("#department").value;
+
 
     // INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
 
@@ -26,3 +33,6 @@ form.addEventListener('submit', (e) => {
 });
 
 // DELETE EMPLOYEE
+
+
+// vim: ft=javascript ai ts=2 et
