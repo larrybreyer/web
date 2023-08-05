@@ -3,7 +3,9 @@
 const $ = selector => document.querySelector(selector);
 
 // SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
-var count = 0;
+let showEmpCount = (count) => $('#empCount').value = '('+count+')';
+var empCount = 0;
+showEmpCount(empCount);
 
 // ADD EMPLOYEE
 document.addEventListener('submit', (e) => {
@@ -22,9 +24,9 @@ document.addEventListener('submit', (e) => {
 
 
     // INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
-    //var row = $('#employees').insertRow(count);
     var table = document.getElementById('employees');
-    var row   = table.insertRow(1);
+    var rowCount = empCount + 1;
+    var row   = table.insertRow(rowCount);
 
 
     // INSERT A CELL FOR EACH ITEM WITHIN THE NEW ROW
@@ -41,10 +43,9 @@ document.addEventListener('submit', (e) => {
     cellExt.innerText = ext;
     cellEmail.innerText = email;
     cellDept.innerText = dept;
-    cellDelete.innerHTML = '&#X274C';
 
-    // alert('stopping here.')
     // CREATE THE DELETE BUTTON
+    cellDelete.innerHTML = '\n<button onclick="delRow(this)">&#X274C</button>\n';
 
     // RESET THE FORM
     $('#id').value = '';
@@ -57,12 +58,20 @@ document.addEventListener('submit', (e) => {
     $('#id').focus();
 
     // INCREMENENT THE NUMBER OF EMPLOYEES IN THE TABLE
-    count += 1;
-    $('#empCount').value = '('+count+')';
+    empCount += 1;
+    showEmpCount(empCount);
 
 });
 
 // DELETE EMPLOYEE
-
+function delRow(x) {
+    var rowNumber = x.closest('tr').rowIndex;
+    if(confirm('Delete this row?')) {
+        var table = document.getElementById('employees');
+        table.deleteRow(rowNumber);
+        empCount -= 1;
+        showEmpCount(empCount);
+    } 
+}
 
 // vim: ft=javascript ai ts=2 et
