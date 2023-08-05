@@ -45,7 +45,7 @@ document.addEventListener('submit', (e) => {
     cellDept.innerText = dept;
 
     // CREATE THE DELETE BUTTON
-    cellDelete.innerHTML = '\n<button onclick="delRow(this)">&#X274C</button>\n';
+    cellDelete.innerHTML = '<button onclick="delRow(this)">&#X274C</button>';
 
     // RESET THE FORM
     $('#id').value = '';
