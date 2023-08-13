@@ -131,37 +131,76 @@ function step09() {
 }
 
 //STEP 10
-//  const movies1 = [
-//      "The Magnificent 7",
-//      "Lawrence of Arabia",
-//      "Ben Hur",
-//      "2001: A Space Odyssey",
-//      "How The West Was Won",
-//      "Some Like It Hot",
-//      "Harvey"];
-//  
-//  const movies = movies1.concat(leastFavMovies);
-//  movies.sort();
-//  movies.reverse();
-//  console.log(movies.pop());
+function step10() {
+    const movies1 = [
+        "The Magnificent 7",
+        "Lawrence of Arabia",
+        "Ben Hur",
+        "2001: A Space Odyssey",
+        "How The West Was Won",
+        "Some Like It Hot",
+        "Harvey"];
 
+    const leastFavMovies = [
+        "The Ridiculous 6 (2015)",
+        "Gold Diggers (2003)",
+        "Cabin Fever (2016)"
+    ];
+    
+    const movies = movies1.concat(leastFavMovies);
+    movies.sort();
+    movies.reverse();
+    console.log(movies[movies.length - 1]);
+}
 
 //STEP 11
-//  const movies1 = [
-//      "The Magnificent 7",
-//      "Lawrence of Arabia",
-//      "Ben Hur",
-//      "2001: A Space Odyssey",
-//      "How The West Was Won",
-//      "Some Like It Hot",
-//      "Harvey"];
+function step11() {
+    const movies1 = [
+        "The Magnificent 7",
+        "Lawrence of Arabia",
+        "Ben Hur",
+        "2001: A Space Odyssey",
+        "How The West Was Won",
+        "Some Like It Hot",
+        "Harvey"];
 
-//  const movies = movies1.concat(leastFavMovies);
-//  movies.sort();
-//  movies.reverse();
-// console.log(movies[0]);
+    const leastFavMovies = [
+        "The Ridiculous 6 (2015)",
+        "Gold Diggers (2003)",
+        "Cabin Fever (2016)"
+    ];
 
+    const movies = movies1.concat(leastFavMovies);
+    movies.sort();
+    movies.reverse();
+    console.log(movies[0]);
+}
 //STEP 12
+function step12() {
+    const movies = [
+        "The Ridiculous 6 (2015)",
+        "The Magnificent 7",
+        "Some Like It Hot",
+        "Lawrence of Arabia",
+        "How The West Was Won",
+        "Harvey",
+        "Gold Diggers (2003)",
+        "Cabin Fever (2016)",
+        "Ben Hur",
+        "2001: A Space Odyssey" 
+    ];
+
+    const leastFavMovies = [
+        "The Ridiculous 6 (2015)",
+        "Gold Diggers (2003)",
+        "Cabin Fever (2016)"
+    ];
+
+    for (let movie of leastFavMovies ) {
+        console.log(movies.findIndex(movie));
+    }
+
+}
 
 //STEP 13
 
@@ -173,4 +212,4 @@ function step09() {
 
 //STEP 17
 
-// vim: ai ts=4 et nu
+// vim: ai ts=4 et 

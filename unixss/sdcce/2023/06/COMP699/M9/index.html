@@ -237,7 +237,29 @@ to display the list in reverse sorted order.
 <pre name="instruct">
 Copy the code from step 9. Use an array function to return just the last
 item in the array and display it within the console window.
+<code>
+    const movies1 = [ 
+        "The Magnificent 7",
+        "Lawrence of Arabia",
+        "Ben Hur",
+        "2001: A Space Odyssey",
+        "How The West Was Won",
+        "Some Like It Hot",
+        "Harvey"];
+
+    const leastFavMovies = [ 
+        "The Ridiculous 6 (2015)",
+        "Gold Diggers (2003)",
+        "Cabin Fever (2016)"
+    ];  
+    
+    const movies = movies1.concat(leastFavMovies);
+    movies.sort();
+    movies.reverse();
+    console.log(movies[movies.length - 1]);
+</code>
 </pre>
+<button onclick="step10()">Run Step 10</button>
 
 <hr>
 <h3>//STEP 11</h3>
@@ -245,7 +267,29 @@ item in the array and display it within the console window.
 Copy the code from step 10. Remove the previous method and this time use a
 method to return just the first item in the array and display it within
 the console window.
+<code>
+    const movies1 = [ 
+        "The Magnificent 7",
+        "Lawrence of Arabia",
+        "Ben Hur",
+        "2001: A Space Odyssey",
+        "How The West Was Won",
+        "Some Like It Hot",
+        "Harvey"];
+
+    const leastFavMovies = [ 
+        "The Ridiculous 6 (2015)",
+        "Gold Diggers (2003)",
+        "Cabin Fever (2016)"
+    ];  
+
+    const movies = movies1.concat(leastFavMovies);
+    movies.sort();
+    movies.reverse();
+    console.log(movies[0]);
+</code>
 </pre>
+<button onclick="step11()">Run Step 11</button>
 
 <hr>
 <h3>//STEP 12</h3>
@@ -253,7 +297,11 @@ the console window.
 Programmatically retrieve the movies in your array that you do not like
 and return their indices. Then, using those indices, programmatically add
 movies that you do like.
+<code>
+
+</code>
 </pre>
+<button onclick="step12()">Run Step 12</button>
 
 <hr>
 <h3>//STEP 13</h3>
@@ -265,8 +313,11 @@ their ranking from 1-5. The array should look something like this:
                  ["Movie 4", 4], ["Movie 5", 5]];
 
 Now, loop through the array and filter out and display only the movie
-names. You must use the filter() method and you?ll need to filter out the
+names. You must use the filter() method and you'll need to filter out the
 names by their primitive data type.
+<code>
+
+</code>
 </pre>
 
 <hr>
@@ -287,6 +338,9 @@ it looks exactly like this in the console window:
         MARK
         FRED
         SALLY
+<code>
+
+</code>
 </pre>
 
 <hr>
@@ -298,6 +352,9 @@ an array.
 TestData: console.log(filterValues([58, '', 'abcd', true, null, false, 0]));
 
 ExpectedResult: [58, "abcd", true]
+<code>
+
+</code>
 </pre>
 
 <hr>
@@ -306,6 +363,9 @@ ExpectedResult: [58, "abcd", true]
 Write a JavaScript function to get a random item from an array. So if I
 create a numeric array with 10 numbers and then pass that array into my
 function, the function should randomly return one of those numbers.
+<code>
+
+</code>
 </pre>
 
 <hr>
@@ -313,6 +373,9 @@ function, the function should randomly return one of those numbers.
 <pre name="instruct">
 Write a JavaScript function to get the largest number from a numeric
 array.
+<code>
+
+</code>
 </pre>
     
     <script src="js/arrays-practice.js"></script>
