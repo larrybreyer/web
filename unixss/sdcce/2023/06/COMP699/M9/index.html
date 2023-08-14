@@ -464,7 +464,16 @@ function, the function should randomly return one of those numbers.
 Write a JavaScript function to get the largest number from a numeric
 array.
 <code>
+    let numbers = [0, 10, -20, 300, 4, 50, 6, 70, 8, 90];
+    let max = 0
 
+    for (let i = 0; i< numbers.length; i++) {
+        if ( numbers[i] > max ) {
+            max = numbers[i];
+        }
+    }
+
+    console.log(max);
 </code>
 </pre>
 <button onclick="step17()">Run Step 17</button>
