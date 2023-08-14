@@ -196,20 +196,116 @@ function step12() {
         "Cabin Fever (2016)"
     ];
 
-    for (let movie of leastFavMovies ) {
-        console.log(movies.findIndex(movie));
+    const goodMovies = [
+        "Operation Mincemeat",
+        "Darkest Hour",
+        "Dunkirk"
+    ];
+
+    // list of indices of movies I don't like
+    badlist = [];
+
+    console.log("Movie list:");
+    // compare all movies to the bad ones
+    for ( let i = 0; i < movies.length ; i++) {
+        console.log(movies[i]);
+        for (let bad of leastFavMovies ) {
+            if (movies[i] == bad ) { 
+                // Add bad movie to bad list
+                badlist.push(i);
+                //  console.log(movies[i]);
+            }
+        }
+    }
+    //  console.log(badlist);
+    // Replace bad movies with good movies
+    for ( let i = 0; i < goodMovies.length ; i++) {
+        movies[badlist[i]] = goodMovies[i];
+        // console.log(movies[badlist[i]]);
+    }
+    // Print out the result to the console.
+    console.log("\nMovie list with replacements:");
+    for (let movie of movies) {
+        console.log(movie);
     }
 
 }
 
 //STEP 13
+function step13() {
+
+    function checkTypeof(data) {
+        return typeof data == "string";
+    }
+
+    movies = [["Movie 1", 1], 
+              ["Movie 2", 2], 
+              ["Movie 3", 3],
+              ["Movie 4", 4], 
+              ["Movie 5", 5]];
+
+    flatten = movies.flat();
+    console.log(flatten.filter(checkTypeof));
+}
 
 //STEP 14
+function step14() {
+
+    employees = ["ZAK", "JESSICA", "MARK", "FRED", "SALLY"];
+
+    const showEmployee = function (list ) {
+        console.log("Employees:\n\n");
+        for ( let i = 0 ; i < list.length; i++ ) {
+            console.log(list[i]);
+        }
+        
+    }
+
+    showEmployee(employees);
+
+}
 
 //STEP 15
+function step15() {
 
+    function filterValues(oldList) {
+        let newList = [];
+        for ( let data of oldList ) {
+            if(data != false && data != null && data != 0 && data != '') {
+                newList.push(data);
+            }
+        }
+        return newList;
+    }
+    console.log(filterValues([58, '', 'abcd', true, null, false, 0]));
+
+}
 //STEP 16
+function step16() {
+
+    let numbers = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90];
+
+    function RNG(list) {
+        return list[Math.floor(Math.random() * list.length)];
+    }
+
+    console.log(RNG(numbers));
+}
 
 //STEP 17
+
+function step17() {
+
+    let numbers = [0, 10, -20, 300, 4, 50, 6, 70, 8, 90];
+    let max = 0
+
+    for (let i = 0; i< numbers.length; i++) {
+        if ( numbers[i] > max ) {
+            max = numbers[i];
+        }
+    }
+
+    console.log(max);
+}
 
 // vim: ai ts=4 et 

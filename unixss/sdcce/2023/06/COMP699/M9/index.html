@@ -298,7 +298,57 @@ Programmatically retrieve the movies in your array that you do not like
 and return their indices. Then, using those indices, programmatically add
 movies that you do like.
 <code>
+    const movies = [ 
+        "The Ridiculous 6 (2015)",
+        "The Magnificent 7",
+        "Some Like It Hot",
+        "Lawrence of Arabia",
+        "How The West Was Won",
+        "Harvey",
+        "Gold Diggers (2003)",
+        "Cabin Fever (2016)",
+        "Ben Hur",
+        "2001: A Space Odyssey" 
+    ];  
 
+    const leastFavMovies = [ 
+        "The Ridiculous 6 (2015)",
+        "Gold Diggers (2003)",
+        "Cabin Fever (2016)"
+    ];  
+
+    const goodMovies = [ 
+        "Operation Mincemeat",
+        "Darkest Hour",
+        "Dunkirk"
+    ];  
+
+    // list of indices of movies I don't like
+    badlist = []; 
+
+    console.log("Movie list:");
+    // compare all movies to the bad ones
+    for ( let i = 0; i < movies.length; i++) {
+        console.log(movies[i]);
+        for (let bad of leastFavMovies ) { 
+            if (movies[i] == bad ) { 
+                // Add bad movie to bad list
+                badlist.push(i);
+                //  console.log(movies[i]);
+            }   
+        }   
+    }   
+    //  console.log(badlist);
+    // Replace bad movies with good movies
+    for ( let i = 0; i < goodMovies.length ; i++) {
+        movies[badlist[i]] = goodMovies[i];
+        // console.log(movies[badlist[i]]);
+    }
+    // Print out the result to the console.
+    console.log("\nMovie list with replacements:");
+    for (let movie of movies) {
+        console.log(movie);
+    }
 </code>
 </pre>
 <button onclick="step12()">Run Step 12</button>
@@ -316,9 +366,21 @@ Now, loop through the array and filter out and display only the movie
 names. You must use the filter() method and you'll need to filter out the
 names by their primitive data type.
 <code>
-
+    function checkTypeof(data) {
+        return typeof data == "string";
+    }
+    
+    movies = [["Movie 1", 1], 
+              ["Movie 2", 2], 
+              ["Movie 3", 3], 
+              ["Movie 4", 4], 
+              ["Movie 5", 5]];
+    
+    flatten = movies.flat();
+    console.log(flatten.filter(checkTypeof));
 </code>
 </pre>
+<button onclick="step13()">Run Step 13</button>
 
 <hr>
 <h3>//STEP 14</h3>
@@ -339,9 +401,20 @@ it looks exactly like this in the console window:
         FRED
         SALLY
 <code>
-
+    employees = ["ZAK", "JESSICA", "MARK", "FRED", "SALLY"];
+    
+    const showEmployee = function (list ) {
+        console.log("Employees:\n\n");
+        for ( let i = 0 ; i < list.length; i++ ) {
+            console.log(list[i]);
+        }   
+        
+    } 
+    
+    showEmployee(employees);
 </code>
 </pre>
+<button onclick="step14()">Run Step 14</button>
 
 <hr>
 <h3>//STEP 15</h3>
@@ -353,9 +426,19 @@ TestData: console.log(filterValues([58, '', 'abcd', true, null, false, 0]));
 
 ExpectedResult: [58, "abcd", true]
 <code>
-
+i    function filterValues(oldList) {
+        let newList = []; 
+        for ( let data of oldList ) { 
+            if(data != false && data != null && data != 0 && data != '') {
+                newList.push(data);
+            }   
+        }   
+        return newList;
+    }   
+    console.log(filterValues([58, '', 'abcd', true, null, false, 0]));
 </code>
 </pre>
+<button onclick="step15()">Run Step 15</button>
 
 <hr>
 <h3>//STEP 16</h3>
@@ -364,9 +447,16 @@ Write a JavaScript function to get a random item from an array. So if I
 create a numeric array with 10 numbers and then pass that array into my
 function, the function should randomly return one of those numbers.
 <code>
-
+    let numbers = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90];
+    
+    function RNG(list) {
+        return list[Math.floor(Math.random() * list.length)];
+    }   
+    
+    console.log(RNG(numbers));
 </code>
 </pre>
+<button onclick="step16()">Run Step 16</button>
 
 <hr>
 <h3>//STEP 17</h3>
@@ -377,6 +467,7 @@ array.
 
 </code>
 </pre>
+<button onclick="step17()">Run Step 17</button>
     
     <script src="js/arrays-practice.js"></script>
 </body>
