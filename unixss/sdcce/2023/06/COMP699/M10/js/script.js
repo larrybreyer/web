@@ -1,6 +1,6 @@
 
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const days = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
 
 function part1step1() {
     let person = "";
@@ -158,12 +158,12 @@ function part3step1() {
     console.log(months[d.getMonth()]+" of "+year+" has "+days+" days");
 }
 function part3step2() {
-    let dateString = prompt("Enter a date: "); 
+    let dateString = prompt("Enter a date[month/day/year]: "); 
     const d = new Date(dateString);
     console.log(months[d.getMonth()]);
 }
 function part3step3() {
-    let dateString = prompt("Enter a date: "); 
+    let dateString = prompt("Enter a date[month/day/year]: "); 
     const d = new Date(dateString);
     if ( d.getDay() == 0 || d.getDay() == 6) {
         console.log("This date is on a weekend");
@@ -172,19 +172,44 @@ function part3step3() {
     }
 }
 function part3step4() {
-    alert("Not yet coded!");
+    let dateString = prompt("Enter a date[month/day/year]: "); 
+    const d = new Date(dateString);
+    console.log("This date falls on a "+ days[d.getDay()]);
+    console.log("The previous day is a " + days[(d.getDay() +6) % 7 ]);
 }
 function part3step5() {
-    alert("Not yet coded!");
+    let dateString = prompt("Enter a date[month/day/year]: "); 
+    const d = new Date(dateString);
+    let dayOfWeek = days[d.getDay()];
+    console.log("This date falls on a " + dayOfWeek);
+    console.log("The first letter of " + dayOfWeek + " is " + 
+                            dayOfWeek.charAt(0));
 }
+// Part 4
 function part4step1() {
-    alert("Not yet coded!");
+    function sortString(s) {
+        let chars = s.split('');
+        return "The ASCII sort of '" + s + "' is '" + 
+                    chars.sort().join('') + "'";
+    }
+    let anyString = prompt("Enter a string of characters: ");
+    console.log(sortString(anyString));
 }
 function part4step2() {
-    alert("Not yet coded!");
+    function caps(s) {
+        let w = s.split(' ');
+        for ( let i = 0; i < w.length; i++) {
+            w[i] = w[i].charAt(0).toUpperCase() + w[i].slice(1);
+        }
+        return w.join(' ');
+    }
+    let anyString = prompt("Enter a sentence: ");
+    console.log(caps(anyString));
 }
 function part4step3() {
-    alert("Not yet coded!");
+    let anyString = prompt("Enter a sentence: ");
+    let letters = anyString.split('');
+    let vowels = 'AEIOUaeiou';
 }
 function part4step4() {
     alert("Not yet coded!");
