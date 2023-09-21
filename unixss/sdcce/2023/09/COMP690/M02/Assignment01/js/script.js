@@ -42,20 +42,57 @@
 //  let mayWeContactYou = false
 //
 // STEP 6
-	console.log(10 + ' Downing')
+//	console.log(10 + ' Downing')
 // STEP 7
+//	console.log(true + ' to type')
+//	console.log(1 + true)
 // STEP 8
+//   No.  Escape the ' in I'm and end the quote with a question mark.
+//      let someString = 'Who once said, "Only two things are infinite, the universe and human stupidity, and I\'m not sure about the former."?'
+//      console.log(someString)
 // STEP 9
+//	let x = null
+//	let y
+//	console.log(x)
+//	console.log(y)
 // STEP 10
-// STEP 10
-// STEP 10
-// STEP 10
-// STEP 10
-// STEP 10
-// STEP 10
-// STEP 10
-// STEP 10
-// STEP 10
+//	console.log(typeof '12.5')
+//	console.log(typeof 12.5)
+//	console.log(typeof false)
+//	console.log(typeof {type:"Fiat", model:"500", color:"white"})
+//	let x
+//	console.log(typeof x)
+//
+// STEP 11
+//	let name = 'Zak Ruvalcaba'
+//	alert('Hello ' + name + ', welcome to the JavaScript class!')
+//
+// STEP 12
+//	let name = 'Robert Breyer'
+//	alert('Hello ' + name + ', welcome to the JavaScript class!')
+//
+// STEP 13
+//	let course = "JavaScript"
+//	let name = 'Robert Breyer'
+//	alert('Hello ' + name + ', welcome to the ' + course + ' class!')
+// STEP 14
+//	let course = "JavaScript"
+//	let name = 'Robert Breyer'
+//	alert('Hello ' + name + '.\nWelcome to the ' + course + ' class!')
+//
+// STEP 15
+//	let course = "JavaScript"
+//	let name = prompt("Please enter your name");
+//	alert('Hello ' + name + '.\nWelcome to the ' + course + ' class!')
+//
+// STEP 16
+//	let course = prompt("Please enter class name");
+//	let name = prompt("Please enter your name");
+//	alert('Hello ' + name + '.\nWelcome to the ' + course + ' class!')
+//
+// STEP 17
+// STEP 18
+// STEP 19
 // STEP 20
-// STEP 20
-// STEP 20
+// STEP 21
+// STEP 22
