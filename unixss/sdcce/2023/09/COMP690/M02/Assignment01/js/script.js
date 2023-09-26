@@ -91,8 +91,27 @@
 //	alert('Hello ' + name + '.\nWelcome to the ' + course + ' class!')
 //
 // STEP 17
+//	let x = 10;
+//	let y = 20;
+//	console.log(x + y)
 // STEP 18
+//	let x = 20;
+//	x += 20;
+//	console.log(x);
 // STEP 19
+//	let x = 20;
+//	x *= 5;
+// 	console.log(x);
 // STEP 20
+//	let x = 20;
+//	x %= 3;
+//	console.log(x);
 // STEP 21
+//	let x = 5;
+//	let y = x == 5;
+//	console.log(y);
 // STEP 22
+//	let x = 10;
+//	let y = x == 9;
+// 	console.log(y);
+
