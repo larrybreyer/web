@@ -1,5 +1,9 @@
+let choice
 
-let choice = prompt("Please enter [H]eads or [T]ails","H");
+do {
+  choice = prompt("Please enter [H]eads or [T]ails","H");
+} while (choice != "H" && choice != "T");
+
 console.log("choice " + choice);
 
 let randomNum = Math.round(Math.random() * 100);
