@@ -3,6 +3,7 @@ let coinFlip;
 do {
 
   coinFlip = Math.random();
+  //console.log(coinFlip);
   
   if ( coinFlip < .5 ) {
     console.log(`Heads`);
