@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Sine Wave</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        svg {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <svg id="sineWave" width="1000" height="200"></svg>
+
+    <script>
+        function createSineWave(svgElement, amplitude, frequency, phase, width, height, cycles) {
+            const svgNS = "http://www.w3.org/2000/svg";
+            const step = width / (frequency * cycles * 100); // Step size for smooth curve
+
+            for (let x = 0; x <= width; x += step) {
+                const y = amplitude * Math.sin((2 * Math.PI * frequency * (x / width)) + phase) + height / 2;
+                const circle = document.createElementNS(svgNS, "circle");
+                circle.setAttribute("cx", x);
+                circle.setAttribute("cy", y);
+                circle.setAttribute("r", 1); // Small circle to approximate the wave
+                circle.setAttribute("fill", "blue");
+                svgElement.appendChild(circle);
+            }
+        }
+
+        const svgElement = document.getElementById("sineWave");
+        createSineWave(svgElement, 50, 2, 0, 1000, 200, 3); // Amplitude 50, frequency 2, phase 0, width 1000px, height 200px, 3 cycles
+    </script>
+</body>
+</html>
+
