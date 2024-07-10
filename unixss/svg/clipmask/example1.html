@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Clipping and Masking</title>
+</head>
+<body>
+	<h1>Creating clips</h1>
+  <svg
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <clipPath id="cut-off-bottom">
+        <rect x="0" y="0" width="200" height="100" />
+      </clipPath>
+    </defs>
+
+    <circle cx="100" cy="100" r="100" clip-path="url(#cut-off-bottom)" />
+  </svg>
+</body>
+</html>
+
+<!--
+vim: ft=svg nu ai et sw=2 ts=2
+-->
