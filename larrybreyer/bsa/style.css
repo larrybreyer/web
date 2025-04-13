@@ -1,6 +1,6 @@
 /* index.html
 */
-blockquote {
+h2 {
   background-color: #f0f0f0;
   padding: 10px;
   border: 1px solid #ccc;
@@ -14,5 +14,14 @@ b {
   font-weight: bold;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
 /* vim: ft=css ai ts=2 et nu
 */
