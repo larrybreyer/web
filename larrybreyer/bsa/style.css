@@ -1,0 +1,18 @@
+/* index.html
+*/
+blockquote {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+b {
+  font-weight: bold;
+}
+
+/* vim: ft=css ai ts=2 et nu
+*/
