@@ -1,0 +1,11 @@
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+}
+.card-title a {
+  color: #000;
+}
+
