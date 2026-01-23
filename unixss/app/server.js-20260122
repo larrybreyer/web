@@ -9,9 +9,7 @@ app.get('/hello', (req, res) => {
 
 // Root endpoint
 app.get('/', (req, res) => {
-  const isProxied = req.get('X-Forwarded-Host');
-  const helloUrl = isProxied ? '/app/hello' : '/hello';
-  res.send(`Express server is running. Try <a href="${helloUrl}">${helloUrl}</a> endpoint.`);
+  res.send('Express server is running. Try /hello endpoint.');
 });
 
 app.listen(PORT, () => {
