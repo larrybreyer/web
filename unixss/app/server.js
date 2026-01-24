@@ -4,7 +4,11 @@ const PORT = process.env.PORT || 3000;
 
 // Hello World endpoint
 app.get('/hello', (req, res) => {
-  res.json({ message: 'Hello World!' });
+  res.json({ 
+    message: "Hello, World!",
+    timestamp: new Date(),
+    server: "unixss.com"
+  });
 });
 
 // Root endpoint
