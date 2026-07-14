@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Tap Root</title>
+
+<!-- cdnjs: a sane CSS reset, so nothing below fights the browser defaults -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+<!-- Fraunces (display), Source Serif 4 (body), IBM Plex Mono (labels / the plain-text voice) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --color-bg: #EAE6D9;
+    --color-ink: #22261D;
+    --color-root: #3F5741;
+    --color-root-soft: rgba(63, 87, 65, 0.32);
+    --color-gold: #93732F;
+    --color-mute: #6B6355;
+
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Source Serif 4', Georgia, serif;
+    --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+    --measure: 640px;
+    --gutter: 2.75rem;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    max-width: calc(var(--measure) + var(--gutter));
+    margin: 0 auto;
+    padding: 5rem 1.5rem 7rem;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-mute);
+    margin: 0 0 1.75rem;
+    padding-left: var(--gutter);
+  }
+
+  .hero {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    max-width: 12ch;
+    margin: 0 0 2.75rem;
+    padding-left: var(--gutter);
+    color: var(--color-ink);
+  }
+
+  /* the essay proper — a taproot running down the gutter, with a small
+     branch mark at every paragraph, since every paragraph is one */
+  .essay {
+    position: relative;
+    padding-left: var(--gutter);
+  }
+
+  .essay::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.4em;
+    bottom: 2.5rem;
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--color-root-soft) 6%,
+      var(--color-root-soft) 92%,
+      transparent
+    );
+  }
+
+  .essay p,
+  .essay blockquote {
+    position: relative;
+    margin: 0 0 1.5rem;
+  }
+
+  .essay p::before {
+    content: '';
+    position: absolute;
+    left: calc(var(--gutter) * -1);
+    top: 0.85em;
+    width: 1.1rem;
+    height: 1px;
+    background: var(--color-root);
+    opacity: 0.45;
+  }
+
+  .essay p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  blockquote {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--color-gold);
+    margin: 2.25rem 0 2.25rem;
+    padding: 0.25rem 0 0.25rem 1.5rem;
+    border-left: 2px solid var(--color-gold);
+  }
+
+  blockquote::before { display: none; }
+
+  cite {
+    display: block;
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: var(--color-mute);
+    margin-top: 0.6rem;
+  }
+
+  .close {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .close p {
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .root-mark {
+    flex: none;
+    width: 34px;
+    height: 34px;
+    margin-top: 0.15rem;
+    color: var(--color-root);
+  }
+
+  .root-mark svg { display: block; width: 100%; height: 100%; }
+
+  /* quiet entrance — a page settling into place, not performing */
+  .eyebrow, .hero, .essay > * {
+    opacity: 0;
+    transform: translateY(6px);
+    animation: settle 0.7s ease-out forwards;
+  }
+  .eyebrow { animation-delay: 0s; }
+  .hero { animation-delay: 0.08s; }
+  .essay > *:nth-child(1) { animation-delay: 0.16s; }
+  .essay > *:nth-child(2) { animation-delay: 0.22s; }
+  .essay > *:nth-child(3) { animation-delay: 0.28s; }
+  .essay > *:nth-child(4) { animation-delay: 0.34s; }
+  .essay > *:nth-child(5) { animation-delay: 0.4s; }
+  .essay > *:nth-child(6) { animation-delay: 0.46s; }
+  .essay > *:nth-child(7) { animation-delay: 0.52s; }
+  .essay > *:nth-child(8) { animation-delay: 0.58s; }
+  .essay > *:nth-child(9) { animation-delay: 0.64s; }
+  .essay > *:nth-child(10) { animation-delay: 0.7s; }
+
+  @keyframes settle {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .eyebrow, .hero, .essay > * {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    :root { --gutter: 1.25rem; }
+    .essay::before,
+    .essay p::before { display: none; }
+    .essay { padding-left: 0.1rem; }
+    .eyebrow, .hero { padding-left: 0.1rem; }
+    blockquote { font-size: 1.2rem; padding-left: 1rem; }
+    body { font-size: 1.05rem; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+
+  <p class="eyebrow">The Tap Root — A Mission Statement</p>
+
+  <h1 class="hero">Every human being is born knowing nothing.</h1>
+
+  <div class="essay">
+
+    <p>No words. No tools. No idea how the world works. And yet, somehow, we became the most successful form of life this planet has ever produced. Everything on this site starts from that puzzle.</p>
+
+    <p>I believe consciousness, at its heart, is the ability to find order in chaos. And I believe we cause almost every problem we face. That might sound like bad news. It isn't. A problem we made is a problem we can unmake — that's real hope, the kind a universe that doesn't care about us either way could never hand us on its own.</p>
+
+    <p>But to find order, you first have to know where you're standing. That's harder than it sounds. Every story we're ever told — about history, about anything — only gives us part of the picture. I love a good mystery novel for this reason. It hands you just enough to feel sure, then hands you one more clue and proves you wrong. I think most of what we call history works the same way. So this site looks back across human history, but it holds its conclusions loosely. The goal isn't to defend one version of the past. It's to see, as clearly as we can, where we're actually headed.</p>
+
+    <p>None of this was built by us alone. Every tool we use, every idea we think with, every comfort we take for granted, was handed down by people who came before us. Most of them we'll never know by name.</p>
+
+    <blockquote>
+      "If I have seen further, it is by standing on the shoulders of giants."
+      <cite>— Isaac Newton, 1675</cite>
+    </blockquote>
+
+    <p>I want this whole site to rest on that same idea. We didn't start from zero. We started standing on everyone who came before us. And here's the part I love most: even Newton's line wasn't fully his own. He borrowed it from a teacher named Bernard of Chartres, who said almost the same thing five hundred years earlier. The debt runs back further than anyone can see the end of. The only way to pay it is the way it's always been paid to us — by making sure the people who come after us have it a little better than we did. Tearing down everything the past built, instead of building on it, is like cutting the ground out from under your own feet. I don't want any part of this site to do that.</p>
+
+    <p>When you know nothing, every question comes down to one: why not? That isn't foolishness. It's just the honest starting point of a mind with no scars yet. The oldest story we have about this might be Eden. It's the Serpent, not God, who teaches Eve to ask it. Experience answers back with a different question — why — because experience is mostly the memory of doors that should have stayed shut. That's no accident. Many of humanity's biggest leaps came from the young, before anyone told them it couldn't be done. Both questions are worth asking. Neither one has the whole answer by itself.</p>
+
+    <p>Along the way, I'll try to give plain, simple definitions for some of our biggest, blurriest words — free will, consciousness, truth, reality, and others. Not the final word on any of them. Just a starting point, so we can at least agree on what we're arguing about.</p>
+
+    <p>For most of my life, I believed the future was something only God could know. Then I started studying information theory, and it changed my mind. Predicting the future isn't some rare gift. It's mostly what minds do, all the time. That's the tool I want to point at the biggest question of all: what happens to us next.</p>
+
+    <div class="close">
+      <span class="root-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <path d="M20 2 V16" />
+          <path d="M20 16 C 14 20, 12 26, 8 38" />
+          <path d="M20 16 C 20 24, 20 30, 20 38" />
+          <path d="M20 16 C 26 20, 28 26, 32 38" />
+          <path d="M20 16 C 17 19, 15 21, 13 25" />
+          <path d="M20 16 C 23 19, 25 21, 27 25" />
+        </svg>
+      </span>
+      <p>This is the tap root. Everything else on this site grows out from here. When I lose the thread, this is where I come back to.</p>
+    </div>
+
+  </div>
+
+</main>
+
+</body>
+</html>
+
