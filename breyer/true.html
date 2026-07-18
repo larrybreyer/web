@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is true? — three tables</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --linen: #f2ece0;
+    --paper: #faf6ee;
+    --ink: #2c2a22;
+    --ink-soft: #55503f;
+    --moss: #4a5d3a;
+    --moss-deep: #37472b;
+    --moss-pale: #cdd6bd;
+    --rust: #a45c3a;
+    --rust-pale: #e7cdb9;
+    --rule: #cfc4a9;
+    --shadow: rgba(44, 42, 34, 0.10);
+    --maxw: 760px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background: var(--linen);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--moss-deep); }
+
+  ::selection { background: var(--moss-pale); }
+
+  .wrap{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header.hero{
+    padding: 96px 0 64px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .eyebrow{
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--moss-deep);
+    margin: 0 0 18px;
+  }
+
+  h1.title{
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: clamp(2.2rem, 5vw, 3.1rem);
+    line-height: 1.15;
+    margin: 0 0 20px;
+    color: var(--ink);
+  }
+
+  .dek{
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    max-width: 56ch;
+    margin: 0;
+  }
+
+  main{ padding: 8px 0 40px; }
+
+  section.idea{
+    padding: 72px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  section.idea:last-of-type{ border-bottom: none; }
+
+  .idea-num{
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: var(--rust);
+    letter-spacing: 0.08em;
+    margin: 0 0 12px;
+  }
+
+  h2.q{
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: clamp(1.6rem, 3.6vw, 2.15rem);
+    margin: 0 0 28px;
+    color: var(--ink);
+    max-width: 22ch;
+  }
+
+  .prose p{ margin: 0 0 18px; color: var(--ink); }
+  .prose p:last-child{ margin-bottom: 0; }
+  .prose em{ font-style: italic; color: var(--moss-deep); }
+
+  .figure{
+    margin: 40px 0 8px;
+    padding: 32px clamp(16px, 4vw, 40px);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    box-shadow: 0 1px 0 var(--shadow);
+  }
+
+  .figure-cap{
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-align: center;
+    margin: 20px 0 0;
+    letter-spacing: 0.02em;
+  }
+
+  /* ---- Section I: number line / plane ---- */
+  .numline svg { width: 100%; height: auto; display: block; }
+  .numline .axis { stroke: var(--rule); stroke-width: 1.5; }
+  .numline .tick { stroke: var(--rule); stroke-width: 1; }
+  .numline .true-point { fill: var(--moss); }
+  .numline .true-ring { fill: none; stroke: var(--moss); stroke-width: 1.5; opacity: 0.5; }
+  .numline .false-point { fill: var(--rust); opacity: 0.85; }
+  .numline text { font-family: "JetBrains Mono", monospace; }
+  .numline .lbl-true { fill: var(--moss-deep); font-size: 13px; font-weight: 600; }
+  .numline .lbl-false { fill: var(--ink-soft); font-size: 11px; }
+
+  /* ---- Section II: paired tables ---- */
+  .table-pair{
+    display: flex;
+    gap: clamp(20px, 4vw, 48px);
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  table.truth{
+    border-collapse: collapse;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    min-width: 160px;
+  }
+
+  table.truth caption{
+    caption-side: bottom;
+    font-family: "Source Serif 4", serif;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--ink-soft);
+    padding-top: 14px;
+  }
+
+  table.truth th, table.truth td{
+    border: 1px solid var(--ink);
+    padding: 11px 22px;
+    text-align: center;
+  }
+
+  table.truth th{
+    background: var(--ink);
+    color: var(--linen);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  table.truth td.true-row{ background: var(--moss-pale); }
+  table.truth td.false-row{ background: var(--rust-pale); }
+
+  table.truth td.undefined-row{
+    background: transparent;
+    border-style: dashed;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  /* ---- Section III: 2x2 grid ---- */
+  .grid2x2{
+    display: grid;
+    grid-template-columns: 92px repeat(2, 1fr);
+    grid-template-rows: 40px repeat(2, 1fr);
+    max-width: 420px;
+    margin: 0 auto;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+  }
+
+  .grid2x2 .corner{ }
+
+  .grid2x2 .colhead{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-size: 12px;
+  }
+
+  .grid2x2 .rowhead{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-size: 12px;
+  }
+
+  .grid2x2 .cell{
+    border: 1px solid var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 22px 10px;
+    min-height: 92px;
+    line-height: 1.4;
+  }
+
+  .grid2x2 .cell.mutual-win{ background: var(--moss-pale); font-weight: 600; }
+  .grid2x2 .cell.mutual-lose{ background: var(--rust-pale); font-weight: 600; }
+  .grid2x2 .cell.split{ background: var(--paper); color: var(--ink-soft); }
+
+  footer{
+    padding: 56px 0 96px;
+    text-align: center;
+  }
+
+  footer p{
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--moss-deep);
+    max-width: 40ch;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 520px){
+    header.hero{ padding: 64px 0 48px; }
+    section.idea{ padding: 52px 0; }
+    .figure{ padding: 24px 16px; }
+    .grid2x2{ grid-template-columns: 70px repeat(2, 1fr); font-size: 11.5px; }
+    .grid2x2 .cell{ padding: 16px 6px; min-height: 76px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html { scroll-behavior: auto; }
+  }
+
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Notes toward a taproot &mdash; on truth</p>
+    <h1 class="title">What is true?</h1>
+    <p class="dek">Three small pictures, tried out on paper before trusting them to a sentence.</p>
+  </header>
+</div>
+
+<main>
+
+  <!-- IDEA I -->
+  <section class="idea" id="zero">
+    <div class="wrap">
+      <p class="idea-num">I.</p>
+      <h2 class="q">Which number is true?</h2>
+      <div class="prose">
+        <p>The usual convention is a habit borrowed from switches: true is 1, false is 0. It works, but it was never argued for &mdash; it's just where counting starts. Ask instead which digit truth actually deserves, and the case runs the other way.</p>
+        <p>There is exactly one way to be right about a thing, and a crowd of ways to be wrong about it. Off by a little, off by a lot, off in the wrong direction entirely &mdash; false is a whole landscape. True is a single point in it.</p>
+        <p>On a line, on a plane, in any coordinate system, there is only one point like that: the origin. Zero isn't a small number among others &mdash; it's the one place every axis agrees to meet. <em>Let zero be true.</em> Everything else on the line is simply some particular way of missing it.</p>
+      </div>
+
+      <div class="figure numline">
+        <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A number line with zero at the center marked as true, and scattered false values at various distances from it">
+          <line x1="30" y1="140" x2="610" y2="140" class="axis"/>
+          <!-- ticks -->
+          <g class="tick">
+            <line x1="90"  y1="134" x2="90"  y2="146"/>
+            <line x1="180" y1="134" x2="180" y2="146"/>
+            <line x1="320" y1="128" x2="320" y2="152"/>
+            <line x1="460" y1="134" x2="460" y2="146"/>
+            <line x1="550" y1="134" x2="550" y2="146"/>
+          </g>
+
+          <!-- false points scattered off the axis to read as "landscape" -->
+          <circle cx="90"  cy="100" r="5" class="false-point"/>
+          <text x="90" y="86" text-anchor="middle" class="lbl-false">&minus;3</text>
+
+          <circle cx="150" cy="175" r="5" class="false-point"/>
+          <text x="150" y="196" text-anchor="middle" class="lbl-false">&minus;0.5</text>
+
+          <circle cx="230" cy="95"  r="5" class="false-point"/>
+          <text x="230" y="81" text-anchor="middle" class="lbl-false">&pi;</text>
+
+          <circle cx="400" cy="180" r="5" class="false-point"/>
+          <text x="400" y="201" text-anchor="middle" class="lbl-false">7</text>
+
+          <circle cx="470" cy="95"  r="5" class="false-point"/>
+          <text x="470" y="81" text-anchor="middle" class="lbl-false">1000</text>
+
+          <circle cx="550" cy="175" r="5" class="false-point"/>
+          <text x="550" y="196" text-anchor="middle" class="lbl-false">&minus;41</text>
+
+          <!-- true point at origin, on axis -->
+          <circle cx="320" cy="140" r="14" class="true-ring"/>
+          <circle cx="320" cy="140" r="6" class="true-point"/>
+          <text x="320" y="168" text-anchor="middle" class="lbl-true">0 &mdash; true</text>
+        </svg>
+        <p class="figure-cap">one true point at the origin &middot; false scattered at every distance from it</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IDEA II -->
+  <section class="idea" id="undefined">
+    <div class="wrap">
+      <p class="idea-num">II.</p>
+      <h2 class="q">Must it be one or the other?</h2>
+      <div class="prose">
+        <p>Common sense hands you a two-row form and calls it complete: a thing is true, or it is false. For a great many everyday claims that's fine &mdash; the coin lands, the light is on or off.</p>
+        <p>But plenty of real tests don't resolve that cleanly. The evidence isn't in yet. The question contradicts its own premise. The thing being asked about doesn't exist in a way that makes true or false apply at all. Forcing a verdict there isn't rigor, it's <em>peer pressure wearing the clothes of logic</em>.</p>
+        <p>A third row costs nothing and refuses nothing. It just tells the truth about the limits of the test.</p>
+      </div>
+
+      <div class="figure">
+        <div class="table-pair">
+          <table class="truth">
+            <caption>the form you're handed</caption>
+            <thead><tr><th>test</th></tr></thead>
+            <tbody>
+              <tr><td class="true-row">true</td></tr>
+              <tr><td class="false-row">false</td></tr>
+            </tbody>
+          </table>
+
+          <table class="truth">
+            <caption>the form that's honest</caption>
+            <thead><tr><th>test</th></tr></thead>
+            <tbody>
+              <tr><td class="true-row">true</td></tr>
+              <tr><td class="false-row">false</td></tr>
+              <tr><td class="undefined-row">undefined</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IDEA III -->
+  <section class="idea" id="winlose">
+    <div class="wrap">
+      <p class="idea-num">III.</p>
+      <h2 class="q">Who wins?</h2>
+      <div class="prose">
+        <p>Most disagreements get read through a single lens: someone wins, someone loses. It feels like the whole space of outcomes, because it's the story we're handed before we even sit down &mdash; but it's only the diagonal of a larger grid.</p>
+        <p>Lay out both outcomes for both people and two more boxes appear, quietly, at the corners: we both come out ahead, or we both come out worse. Neither fits the contest narrative, and both happen constantly &mdash; a negotiation, a hard conversation, a disagreement between people who actually like each other.</p>
+      </div>
+
+      <div class="figure">
+        <div class="grid2x2">
+          <div class="corner"></div>
+          <div class="colhead">win</div>
+          <div class="colhead">lose</div>
+
+          <div class="rowhead">win</div>
+          <div class="cell mutual-win">win &mdash; win</div>
+          <div class="cell split">I win<br>you lose</div>
+
+          <div class="rowhead">lose</div>
+          <div class="cell split">I lose<br>you win</div>
+          <div class="cell mutual-lose">lose &mdash; lose</div>
+        </div>
+        <p class="figure-cap">rows &amp; columns: me / you &middot; the two shaded corners are the outcomes the usual story leaves out</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="wrap">
+  <footer>
+    <p>Truth turns out to have more room in it than the tables we're first handed.</p>
+  </footer>
+</div>
+
+</body>
+</html>
