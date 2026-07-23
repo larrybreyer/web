@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaTeX Math Webpage</title>
+
+    <!-- 1. Load KaTeX CSS Styling -->
+    <link rel="stylesheet" href="katex/katex.min.css">
+
+    <!-- 2. Load KaTeX JavaScript Library -->
+    <script defer src="katex/katex.min.js"></script>
+
+    <!-- 3. Load the Extension that Automatically Finds Math Text -->
+    <script defer src="katex/contrib/auto-render.min.js" 
+        onload="renderMathInElement(document.body);">
+    </script>
+
+</head>
+<body>
+
+    <h1>My Math Webpage</h1>
+
+    <!-- Inline Math Example -->
+    <p>The famous fundamental limit is written inline as \(\lim_{x \to 0} \frac{\sin(x)}{x} = 1\) right inside this paragraph.</p>
+
+    <!-- Block / Display Math Example -->
+    <p>If you want to isolate a complex formula on its own line, use the block delimiters:</p>
+    
+    $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
+
+<hr>
+
+Testing my understanding of LaTex represnetations
+
+$$\lim_{x \to 0} \frac{\sin(x)}{x} = 1$$ 
+
+</body>
+</html>
+

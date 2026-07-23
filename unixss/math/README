@@ -1,0 +1,11 @@
+=== 2026/07/23 Thu 13:45:29 UTC-0700 === vim:ft=sec
+
+Contains JavaScript code to render math equations in LaTex
+
+see latex.html
+
+Downloaded katex.tar.gz from
+https://github.com/KaTeX/KaTeX/releases/tag/v0.18.1/
+
+
+
