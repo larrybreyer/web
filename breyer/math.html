@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LaTeX in HTML Test</title>
+    <!-- 1. Load the MathJax script to enable LaTeX processing -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://jsdelivr.net"></script>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+        }
+        .center {
+            text-align: center;
+        }
+        /* You can easily style the rendered MathJax containers via CSS */
+        mjx-container {
+            font-size: 1.3em !important;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="center">Evaluating HTML LaTeX Rendering</h1>
+
+    <p>We can write an inline equation like this: \( e^{\pi i} = -1 \). It fits beautifully right inside our sentence structure.</p>
+
+    <h3 class="center">Euler's Formula (Block Display):</h3>
+    <!-- Block equations use \[ ... \] or $$ ... $$ depending on configuration -->
+    \[ e^{ix} = \cos x + i\sin x \]
+
+</body>
+</html>
+
